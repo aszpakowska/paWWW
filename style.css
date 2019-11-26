@@ -14,10 +14,12 @@ article {
     border: #3f403f;
 }
 table{
-     border-collapse: inherit;
+      border-collapse: inherit;
     background-color: rgba(193, 200, 196, 0.75);
     border: #050505;
-    text-align: left;}
+    text-align: left;
+    border-width: thin;
+    width : 100%;}
 
 td{border-spacing: 220px;
 }
