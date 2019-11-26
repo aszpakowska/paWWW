@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz zgłoszeniowy</title>
+    <link rel="stylesheet" href="formaform.css">
+    <script src="formularz.js"></script>
+
+</head>
+
+<body>
+<h1>Fotografia</h1>
+<nav class="menu">
+    <ul>
+        <li>
+            <a href="stronaglowna.html">Strona główna</a>
+        </li>
+        <li>
+            <a href="onas.html">O nas</a>
+        </li>
+        <li>
+            <a>Galeria</a>
+            <ul>
+                <li>
+                    <a href="stronaglowna.html">Zdjęcia</a>
+                </li>
+                <li>
+                    <a href="video.html">Video i Audio</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="form.html">Formularz</a>
+        </li>
+        <li>
+            <a href="kontakt.html">Kontakt</a>
+        </li>
+    </ul>
+</nav>
+<br>
+<h3>Miłośnik fotografii</h3>
+<h2>Kwestionariusz danych osobowych</h2>
+    <form action="#" method="get">
+        <fieldset name="dane_osobowe">
+        <p><i>Proszę wypełnić ten formularz. Obowiązkowe pola oznaczono znakiem </i>
+            <em>*</em></p>
+        <label>Imię <em>*</em></label><input type="text" name="f_imie" /> <br/>
+        <label>Nazwisko <em>*</em></label><input type="text" name="f_nazwisko" /> <br/>
+        <label>Płeć <em>*</em></label>
+
+        <input name="f_plec" value="f_k" checked type="radio" onclick="showElement('NazwiskoPanieńskie');" />kobieta
+        <input name="f_plec" value="f_m" type="radio" onclick="hideElement('NazwiskoPanieńskie');" />mężczyzna <br/>
+        <label>Nazwisko panieńskie</label>
+        <span id="NazwiskoPanieńskie"><input type="text" name="f_nazwisko_p"></span> <br/>
+
+        <label>e-mail</label><input type="email" name="f_email"/> <br/>
+        <label>kod pocztowy</label> <input type="text" name="f_kod" onkeyup="checkZIPCodeRegEx(this);"/>
+        <b id="kod" class="none"> </b> <br/>
+
+            <label>Ulica</label><input type="text" name="f_ulica"/> <br/>
+            <label>Miasto</label><input type="text" name="f_miasto" /> <br/>
+            <label>Zainteresowania</label><textarea rows="5" cols="15" name="uwagi"></textarea> <br/>
+            <input type="submit" name="submit" value="Dołącz do nas" onclick="validate(this.form);"/>
+        </fieldset>
+        <script type="text/javascript">
+        function showElement(e)
+        {
+            document.getElementById(e).style.visibility = 'visible';
+        }
+        function hideElement(e)
+        {
+            document.getElementById(e).style.visibility = 'hidden';
+        }
+        </script>
+        <br><br><br>
+        <h4>src background: "https://inspirowaninatura.pl/wp-content/uploads/2016/03/Ogr%C3%B3d-w-zgodzie-z-natur%C4%85-1.jpg"<br>
+            © Aleksandra Szpakowska</h4>
+</body>
+
+</html>

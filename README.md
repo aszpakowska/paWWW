@@ -1,1 +1,1 @@
-# paWWW
+# aplikacjeWWW
